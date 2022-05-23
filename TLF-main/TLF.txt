@@ -1,0 +1,31 @@
+srmdMPR/\/:\:|:::s:!¡:'"?.crcdcscls$%clase%[1213]<>*hola*@-@!@@etsrlscdncrtprn
+
+CATEGORIA,		TOKEN,			EXPRESION REGULAR,				ENJAVA
+Operadores		Aritmeticos		(s U r U m U d U M U P U R)			+, -,  *, /, ^, Raiz
+Operadores		Relacionales 		(/ U \ U /: U \: U |: U ::)			>, <, <=, >=, !=, ==
+Operadores 		Logicos			(! U ¡)						&&, ||
+Operadores 		Asignacion		:						=
+Operadores		Abrir			(' U " U ¿)					(, [, {
+Operadores		Cerrar			(' U " U ?)					), ], } 
+Operadores 		Terminal		.						;
+Operadores		Sentencia		-
+
+Palabra Reservada	bucle			c.r.c						for, while
+Palabra Reservada	decision		d.c.s						if
+Palabra Reservada	clase			c.l.s						class
+
+Identificadores		variable		# cos #				
+Identificadores		metodo			$ cos $
+Identificadores		clase			% cos %
+
+Valor Asignacion	Entero			[.cos.]						
+Valor Asignacion	Reales			<.cos.>						61872678.898f
+Valor Asignacion	Cadena con especiales	(*.(@.(- U ! U @))*.cos.(@.- U @.! U @@) 
+Valor Asignacion	Caracteres
+
+Tipo Dato		Enteros			e.t.s						int
+Tipo Dato		Reales			r.l.s						float
+Tipo Dato		Cadena caracteres	c.d.n						String
+Tipo Dato		caracteres		c.r.t						Char	
+
+N/			Principal		prn						Main

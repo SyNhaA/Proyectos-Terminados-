@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main" styleClass="raiz" stylesheets="@../../../../resources/style_sheet.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.redSocial.views.user.UserViewController">
+    <children>
+        <AnchorPane styleClass="raiz" stylesheets="@../../../../resources/style_sheet.css" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="682.0"
+                            style="-fx-border-color: #EDEDED; -fx-border-radius: 15 15 15 15;"
+                            stylesheets="@../../../../resources/style_sheet.css" AnchorPane.bottomAnchor="0.0"
+                            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                              prefHeight="650.0" prefWidth="220.0" style="-fx-background-radius: 0 0 0 15;"
+                              styleClass="background-dark" stylesheets="@../../../../resources/style_sheet.css"
+                              BorderPane.alignment="CENTER">
+                            <children>
+                                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="220.0"
+                                      style="-fx-background-radius: 0 0 0 10;"
+                                      stylesheets="@../../../../resources/style_sheet.css">
+                                    <children>
+                                        <Separator orientation="VERTICAL" prefHeight="55.0" prefWidth="0.0"
+                                                   visible="false"/>
+                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0"
+                                              stylesheets="@../../../../resources/style_sheet.css">
+                                            <children>
+                                                <VBox alignment="CENTER" prefHeight="136.0" prefWidth="201.0"
+                                                      spacing="8.0"
+                                                      stylesheets="@../../../../resources/style_sheet.css">
+                                                    <children>
+                                                        <ImageView fitHeight="102.0" fitWidth="103.0"
+                                                                   pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../../images/up_user-img.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblNombreUsr" alignment="CENTER" prefHeight="25.0"
+                                                               prefWidth="203.0"
+                                                               stylesheets="@../../../../resources/style_sheet.css"
+                                                               text="Pepito Perez" textAlignment="CENTER"
+                                                               textFill="WHITE">
+                                                            <font>
+                                                                <Font name="Calibri Bold" size="22.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </HBox>
+                                        <Separator orientation="VERTICAL" prefHeight="52.0" prefWidth="8.0"
+                                                   visible="false"/>
+                                        <HBox fx:id="btnPublicaciones" alignment="CENTER_LEFT" maxHeight="-Infinity"
+                                              maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                              onMouseClicked="#viewPublications" prefHeight="60.0" prefWidth="220.0"
+                                              styleClass="boton-UserBar"
+                                              stylesheets="@../../../../resources/style_sheet.css">
+                                            <children>
+                                                <ImageView fitHeight="35.0" fitWidth="35.0">
+                                                    <image>
+                                                        <Image url="@../../../../images/up_publications-img.png"/>
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="30.0"/>
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Label text="Publicaciones" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Calibri" size="18.0"/>
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="15.0"/>
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox fx:id="btnContactos" alignment="CENTER_LEFT" layoutX="10.0"
+                                              layoutY="323.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                              minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewContacts"
+                                              prefHeight="60.0" prefWidth="220.0" styleClass="boton-UserBar"
+                                              stylesheets="@../../../../resources/style_sheet.css">
+                                            <children>
+                                                <ImageView fitHeight="35.0" fitWidth="35.0">
+                                                    <image>
+                                                        <Image url="@../../../../images/up_contacts-img.png"/>
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="30.0"/>
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Label text="Contactos" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Calibri" size="18.0"/>
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="15.0"/>
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox fx:id="btnNotificaciones" alignment="CENTER_LEFT" layoutX="10.0"
+                                              layoutY="380.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                              minHeight="-Infinity" minWidth="-Infinity"
+                                              onMouseClicked="#viewNotifications" prefHeight="60.0" prefWidth="220.0"
+                                              styleClass="boton-UserBar"
+                                              stylesheets="@../../../../resources/style_sheet.css">
+                                            <children>
+                                                <ImageView fitHeight="35.0" fitWidth="35.0">
+                                                    <image>
+                                                        <Image url="@../../../../images/up_notifications-img.png"/>
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="30.0"/>
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Label text="Notificaciones" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Calibri" size="18.0"/>
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="15.0"/>
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox fx:id="btnMensajes" accessibleRole="BUTTON" alignment="CENTER_LEFT"
+                                              layoutX="10.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                              minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#viewMessages"
+                                              prefHeight="60.0" prefWidth="220.0" styleClass="boton-UserBar"
+                                              stylesheets="@../../../../resources/style_sheet.css">
+                                            <children>
+                                                <ImageView fitHeight="35.0" fitWidth="35.0">
+                                                    <image>
+                                                        <Image url="@../../../../images/up_messages-img.png"/>
+                                                    </image>
+                                                    <HBox.margin>
+                                                        <Insets left="30.0"/>
+                                                    </HBox.margin>
+                                                </ImageView>
+                                                <Label text="Mensajes" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Calibri" size="18.0"/>
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="15.0"/>
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <Separator layoutX="117.0" layoutY="213.0" orientation="VERTICAL"
+                                                   prefHeight="100.0" prefWidth="2.0" visible="false"/>
+                                        <Label alignment="TOP_RIGHT" onMouseClicked="#eliminarCuenta" prefHeight="21.0"
+                                               prefWidth="193.0" styleClass="texto-link2" text="Eliminar cuenta"
+                                               textFill="#ffffffd4">
+                                            <font>
+                                                <Font name="Calibri Bold" size="15.0"/>
+                                            </font>
+                                        </Label>
+                                        <Separator layoutX="117.0" layoutY="465.0" orientation="VERTICAL"
+                                                   prefHeight="25.0" prefWidth="2.0" visible="false"/>
+                                        <HBox prefHeight="52.0" prefWidth="220.0"
+                                              stylesheets="@../../../../resources/style_sheet.css">
+                                            <children>
+                                                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" onAction="#volver"
+                                                        prefHeight="35.0" prefWidth="35.0" styleClass="boton-back"
+                                                        stylesheets="@../../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true"
+                                                                   preserveRatio="true" styleClass="boton-close">
+                                                            <image>
+                                                                <Image url="@../../../../images/b_back.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.42" specularConstant="0.6">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                            </children>
+                                            <padding>
+                                                <Insets left="10.0"/>
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                    </left>
+                    <top>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="32.0" prefWidth="900.0" styleClass="panel-bar"
+                                    stylesheets="@../../../../resources/style_sheet.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="32.0" prefWidth="900.0" styleClass="panel-bar"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <effect>
+                                        <Lighting diffuseConstant="1.45" specularConstant="0.77" specularExponent="29.3"
+                                                  surfaceScale="1.38">
+                                            <bumpInput>
+                                                <Shadow/>
+                                            </bumpInput>
+                                            <light>
+                                                <Light.Distant/>
+                                            </light>
+                                        </Lighting>
+                                    </effect>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="32.0" prefWidth="112.0" styleClass="background-transparent"
+                                            stylesheets="@../../../../resources/style_sheet.css"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0"
+                                            AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="96.0" spacing="5.0"
+                                              AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Separator maxHeight="-Infinity" maxWidth="-Infinity"
+                                                           minHeight="-Infinity" minWidth="-Infinity"
+                                                           orientation="VERTICAL" prefHeight="60.0" prefWidth="2.0"
+                                                           visible="false"/>
+                                                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" onAction="#salir"
+                                                        prefHeight="25.0" prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../../images/b_close.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.42" specularConstant="0.6">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button layoutX="12.0" layoutY="10.0" maxHeight="-Infinity"
+                                                        maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                                        mnemonicParsing="false" onAction="#minimizar" prefHeight="25.0"
+                                                        prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../../images/b_minimize.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.42" specularConstant="0.6">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button disable="true" layoutX="12.0" layoutY="10.0"
+                                                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" onAction="#salir"
+                                                        prefHeight="25.0" prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../../images/b_expand.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.42" specularConstant="0.6">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                                <Label fx:id="lblLink" alignment="CENTER" text="https://market-system/network.com"
+                                       textFill="#00000073" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="200.0"
+                                       AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="10.0">
+                                    <font>
+                                        <Font name="Segoe UI Symbol" size="12.5"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <center>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="650.0" prefWidth="680.0"
+                                    style="-fx-background-radius: 0 0 15 0;" styleClass="background-clare"
+                                    BorderPane.alignment="CENTER">
+                            <children>
+                                <Pane fx:id="panePublicaciones" maxHeight="-Infinity" maxWidth="-Infinity"
+                                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="680.0"
+                                      styleClass="background-transparent"
+                                      stylesheets="@../../../../resources/style_sheet.css">
+                                    <children>
+                                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                    minWidth="-Infinity" prefHeight="650.0" prefWidth="680.0"
+                                                    styleClass="background-transparent">
+                                            <children>
+                                                <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity"
+                                                      prefWidth="680.0" styleClass="texto-title"
+                                                      stylesheets="@../../../../resources/style_sheet.css"
+                                                      AnchorPane.topAnchor="8.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" styleClass="texto-title"
+                                                               stylesheets="@../../../../resources/style_sheet.css"
+                                                               text="PUBLICACIONES" textFill="#535353">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed Extra Bold"
+                                                                      size="48.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </HBox>
+                                                <Pane layoutX="57.0" layoutY="84.0" prefHeight="114.0" prefWidth="584.0"
+                                                      styleClass="panel-contenedorNormal" AnchorPane.topAnchor="92.0">
+                                                    <children>
+                                                        <GridPane alignment="CENTER" layoutX="114.0" layoutY="18.0"
+                                                                  prefHeight="90.0" prefWidth="325.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0"
+                                                                                   minWidth="10.0" prefWidth="80.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0"
+                                                                                   minWidth="10.0" prefWidth="245.0"/>
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="44.0" minHeight="10.0"
+                                                                                prefHeight="44.0" valignment="TOP"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints maxHeight="55.0" minHeight="10.0"
+                                                                                prefHeight="46.0" valignment="TOP"
+                                                                                vgrow="SOMETIMES"/>
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label maxHeight="-Infinity" minHeight="-Infinity"
+                                                                       prefHeight="25.0"
+                                                                       stylesheets="@../../../../resources/style_sheet.css"
+                                                                       text="Producto:" textAlignment="CENTER">
+                                                                    <font>
+                                                                        <Font name="Calibri" size="16.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <Label maxHeight="-Infinity" minHeight="-Infinity"
+                                                                       prefHeight="25.0"
+                                                                       stylesheets="@../../../../resources/style_sheet.css"
+                                                                       text="Categoría:" textAlignment="CENTER"
+                                                                       GridPane.rowIndex="1">
+                                                                    <font>
+                                                                        <Font name="Calibri" size="16.0"/>
+                                                                    </font>
+                                                                </Label>
+                                                                <VBox prefHeight="200.0" prefWidth="100.0"
+                                                                      GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                    <children>
+                                                                        <VBox fx:id="contentC">
+                                                                            <children>
+                                                                                <TextField fx:id="txtCategoriaProducto"
+                                                                                           focusTraversable="false"
+                                                                                           maxHeight="-Infinity"
+                                                                                           maxWidth="-Infinity"
+                                                                                           minHeight="-Infinity"
+                                                                                           minWidth="-Infinity"
+                                                                                           prefHeight="30.0"
+                                                                                           prefWidth="245.0"
+                                                                                           promptText="Categoría del producto"
+                                                                                           stylesheets="@../../../../resources/style_sheet.css"/>
+                                                                            </children>
+                                                                        </VBox>
+                                                                        <Label fx:id="lblInfoCategoria"
+                                                                               text="*Debes ingresar la categoría del producto"
+                                                                               textFill="#e12323" visible="false">
+                                                                            <font>
+                                                                                <Font name="Calibri Bold" size="12.0"/>
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </VBox>
+                                                                <VBox prefHeight="200.0" prefWidth="100.0"
+                                                                      GridPane.columnIndex="1">
+                                                                    <children>
+                                                                        <VBox fx:id="contentP">
+                                                                            <children>
+                                                                                <TextField fx:id="txtNombreProducto"
+                                                                                           focusTraversable="false"
+                                                                                           maxHeight="-Infinity"
+                                                                                           maxWidth="-Infinity"
+                                                                                           minHeight="-Infinity"
+                                                                                           minWidth="-Infinity"
+                                                                                           prefHeight="30.0"
+                                                                                           prefWidth="245.0"
+                                                                                           promptText="Nombre del producto"
+                                                                                           stylesheets="@../../../../resources/style_sheet.css"/>
+                                                                            </children>
+                                                                        </VBox>
+                                                                        <Label fx:id="lblInfoProducto"
+                                                                               text="*Debes ingresar el nombre del producto"
+                                                                               textFill="#e12323" visible="false">
+                                                                            <font>
+                                                                                <Font name="Calibri Bold" size="12.0"/>
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                </VBox>
+                                                            </children>
+                                                        </GridPane>
+                                                        <Button layoutX="463.0" layoutY="64.0" mnemonicParsing="false"
+                                                                onAction="#agregarPublicacion" prefHeight="29.0"
+                                                                prefWidth="92.0" styleClass="boton-normal"
+                                                                stylesheets="@../../../../resources/style_sheet.css"
+                                                                text="Publicar" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed Extra Bold"
+                                                                      size="18.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE"
+                                                                   height="72.0" layoutX="20.0" layoutY="16.0"
+                                                                   stroke="TRANSPARENT" strokeType="INSIDE"
+                                                                   width="72.0"/>
+                                                        <ImageView fitHeight="75.0" fitWidth="75.0"
+                                                                   focusTraversable="true" layoutX="20.0" layoutY="15.0"
+                                                                   pickOnBounds="true" preserveRatio="true"
+                                                                   styleClass="principalPane-background">
+                                                            <image>
+                                                                <Image url="@../../../../images/up_news-img.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </Pane>
+                                                <BorderPane layoutX="28.0" layoutY="204.0" maxHeight="-Infinity"
+                                                            maxWidth="-Infinity" minHeight="-Infinity"
+                                                            minWidth="-Infinity" prefHeight="411.0" prefWidth="625.0"
+                                                            style="-fx-background-color: white;"
+                                                            styleClass="panel-contenedorNormal"
+                                                            stylesheets="@../../../../resources/style_sheet.css"
+                                                            AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="28.0"
+                                                            AnchorPane.rightAnchor="27.0">
+                                                    <top>
+                                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity"
+                                                              minHeight="-Infinity" minWidth="-Infinity"
+                                                              prefHeight="40.0" prefWidth="625.0"
+                                                              style="-fx-background-radius: 10 10 0 0;"
+                                                              styleClass="background-dark"
+                                                              stylesheets="@../../../../resources/style_sheet.css"
+                                                              BorderPane.alignment="CENTER">
+                                                            <children>
+                                                                <HBox prefHeight="40.0" prefWidth="625.0"
+                                                                      stylesheets="@../../../../resources/style_sheet.css">
+                                                                    <children>
+                                                                        <Label alignment="CENTER" prefHeight="26.0"
+                                                                               prefWidth="300.0" styleClass="font"
+                                                                               stylesheets="@../../../../resources/style_sheet.css"
+                                                                               text="Mis publicaciones"
+                                                                               textAlignment="CENTER" textFill="WHITE">
+                                                                            <font>
+                                                                                <Font name="Calibri Bold" size="22.0"/>
+                                                                            </font>
+                                                                        </Label>
+                                                                        <Separator prefHeight="2.0" prefWidth="51.0"
+                                                                                   visible="false"/>
+                                                                        <Label alignment="CENTER" prefHeight="26.0"
+                                                                               prefWidth="260.0" styleClass="font"
+                                                                               stylesheets="@../../../../resources/style_sheet.css"
+                                                                               text="Publicaciones de contactos"
+                                                                               textAlignment="CENTER" textFill="WHITE">
+                                                                            <font>
+                                                                                <Font name="Calibri Bold" size="22.0"/>
+                                                                            </font>
+                                                                        </Label>
+                                                                    </children>
+                                                                    <padding>
+                                                                        <Insets bottom="5.0" top="5.0"/>
+                                                                    </padding>
+                                                                </HBox>
+                                                            </children>
+                                                        </Pane>
+                                                    </top>
+                                                    <center>
+                                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity"
+                                                              minHeight="-Infinity" minWidth="-Infinity"
+                                                              prefHeight="370.0" prefWidth="5.0"
+                                                              styleClass="background-clare"
+                                                              stylesheets="@../../../../resources/style_sheet.css"
+                                                              BorderPane.alignment="CENTER">
+                                                            <children>
+                                                                <Separator layoutX="2.0" maxHeight="-Infinity"
+                                                                           maxWidth="-Infinity" minHeight="-Infinity"
+                                                                           minWidth="-Infinity" orientation="VERTICAL"
+                                                                           prefHeight="368.0" prefWidth="1.0"/>
+                                                            </children>
+                                                        </Pane>
+                                                    </center>
+                                                    <right>
+                                                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+                                                                    minHeight="-Infinity" minWidth="-Infinity"
+                                                                    prefHeight="369.0" prefWidth="308.0"
+                                                                    styleClass="background-transparent"
+                                                                    stylesheets="@../../../../resources/style_sheet.css"
+                                                                    BorderPane.alignment="CENTER">
+                                                            <children>
+                                                                <ScrollPane layoutX="-40.0" maxHeight="-Infinity"
+                                                                            maxWidth="-Infinity" minHeight="-Infinity"
+                                                                            minWidth="-Infinity" prefHeight="375.0"
+                                                                            prefWidth="240.0"
+                                                                            stylesheets="@../../../../resources/style_sheet.css"
+                                                                            AnchorPane.bottomAnchor="8.0"
+                                                                            AnchorPane.leftAnchor="0.0"
+                                                                            AnchorPane.rightAnchor="0.0"
+                                                                            AnchorPane.topAnchor="0.0">
+                                                                    <content>
+                                                                        <GridPane fx:id="gridPanePostsNoPropios"
+                                                                                  alignment="TOP_CENTER"
+                                                                                  maxWidth="-Infinity"
+                                                                                  minWidth="-Infinity" prefHeight="0.0"
+                                                                                  prefWidth="292.0">
+                                                                            <rowConstraints>
+                                                                                <RowConstraints minHeight="10.0"
+                                                                                                prefHeight="30.0"
+                                                                                                vgrow="SOMETIMES"/>
+                                                                            </rowConstraints>
+                                                                        </GridPane>
+                                                                    </content>
+                                                                </ScrollPane>
+                                                                <Label fx:id="lblMensajePOth" alignment="CENTER"
+                                                                       styleClass="texto-italicMini"
+                                                                       stylesheets="@../../../../resources/style_sheet.css"
+                                                                       text="No hay publicaciones todavía"
+                                                                       AnchorPane.bottomAnchor="160.0"
+                                                                       AnchorPane.leftAnchor="50.0"
+                                                                       AnchorPane.rightAnchor="50.0"
+                                                                       AnchorPane.topAnchor="160.0"/>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </right>
+                                                    <left>
+                                                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+                                                                    minHeight="-Infinity" minWidth="-Infinity"
+                                                                    prefHeight="375.0" prefWidth="306.0"
+                                                                    styleClass="background-transparent"
+                                                                    stylesheets="@../../../../resources/style_sheet.css"
+                                                                    BorderPane.alignment="CENTER">
+                                                            <children>
+                                                                <ScrollPane hbarPolicy="NEVER" hvalue="1.0"
+                                                                            layoutY="6.0" maxHeight="-Infinity"
+                                                                            maxWidth="-Infinity" minHeight="-Infinity"
+                                                                            minWidth="-Infinity" prefHeight="369.0"
+                                                                            prefWidth="308.0"
+                                                                            stylesheets="@../../../../resources/style_sheet.css"
+                                                                            vvalue="1.0" AnchorPane.bottomAnchor="8.0"
+                                                                            AnchorPane.leftAnchor="0.0"
+                                                                            AnchorPane.rightAnchor="-2.0"
+                                                                            AnchorPane.topAnchor="0.0">
+                                                                    <content>
+                                                                        <GridPane fx:id="gridPanePostsPropios"
+                                                                                  alignment="TOP_CENTER"
+                                                                                  maxWidth="-Infinity"
+                                                                                  minWidth="-Infinity" prefHeight="0.0"
+                                                                                  prefWidth="292.0">
+                                                                            <rowConstraints>
+                                                                                <RowConstraints minHeight="10.0"
+                                                                                                prefHeight="30.0"
+                                                                                                vgrow="SOMETIMES"/>
+                                                                            </rowConstraints>
+                                                                        </GridPane>
+                                                                    </content>
+                                                                </ScrollPane>
+                                                                <Label fx:id="lblMensajePOwn" alignment="CENTER"
+                                                                       styleClass="texto-italicMini"
+                                                                       stylesheets="@../../../../resources/style_sheet.css"
+                                                                       text="No tienes publicaciones todavía"
+                                                                       AnchorPane.bottomAnchor="160.0"
+                                                                       AnchorPane.leftAnchor="61.0"
+                                                                       AnchorPane.rightAnchor="61.0"
+                                                                       AnchorPane.topAnchor="160.0"/>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </left>
+                                                </BorderPane>
+                                                <Label layoutX="57.0" layoutY="64.0"
+                                                       text="¿Tienes un producto que publicar?"
+                                                       AnchorPane.topAnchor="64.0">
+                                                    <font>
+                                                        <Font name="Gabriola" size="20.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

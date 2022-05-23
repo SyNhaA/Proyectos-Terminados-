@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main" prefHeight="420.0" prefWidth="358.0" styleClass="root"
+            stylesheets="@../../../../resources/style_sheet.css" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.redSocial.views.user.CommentsViewController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="root"
+                    stylesheets="@../../../../resources/style_sheet.css" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="352.0"
+                            style="-fx-border-color: #CCCCCC; -fx-border-width: 2; -fx-border-radius: 15 15 15 15;"
+                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <center>
+                        <AnchorPane prefHeight="388.0" prefWidth="339.0" style="-fx-background-radius: 0 0 15 15;"
+                                    styleClass="background-clare" stylesheets="@../../../../resources/style_sheet.css"
+                                    BorderPane.alignment="CENTER">
+                            <children>
+                                <Label alignment="CENTER" layoutX="75.0" layoutY="-8.0" maxHeight="-Infinity"
+                                       maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0"
+                                       prefWidth="200.0" style="-fx-font-size: 32;" styleClass="texto-subtitle"
+                                       stylesheets="@../../../../resources/style_sheet.css" text="COMENTARIOS"
+                                       AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0"
+                                       AnchorPane.topAnchor="8.0">
+                                    <font>
+                                        <Font name="Tw Cen MT Condensed Extra Bold" size="36.0"/>
+                                    </font>
+                                </Label>
+                                <AnchorPane layoutX="15.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0"
+                                            prefWidth="300.0"
+                                            style="-fx-border-color: #C7C7C7; -fx-border-radius: 0 0 5 5;"
+                                            styleClass="background-clare" AnchorPane.leftAnchor="25.0"
+                                            AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="50.0">
+                                    <children>
+                                        <ScrollPane layoutX="6.0" layoutY="11.0" maxHeight="-Infinity"
+                                                    maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                                    prefHeight="239.0" prefWidth="300.0"
+                                                    stylesheets="@../../../../resources/style_sheet.css"
+                                                    AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0"
+                                                    AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="2.0">
+                                            <content>
+                                                <GridPane fx:id="gridPaneComentarios" alignment="TOP_CENTER"
+                                                          maxWidth="-Infinity" minWidth="-Infinity" prefHeight="0.0"
+                                                          prefWidth="282.0">
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                        vgrow="SOMETIMES"/>
+                                                    </rowConstraints>
+                                                </GridPane>
+                                            </content>
+                                        </ScrollPane>
+                                        <Label fx:id="lblMensaje" alignment="CENTER" styleClass="texto-italicMini"
+                                               stylesheets="@../../../../resources/style_sheet.css"
+                                               text="No hay comentarios todavía" AnchorPane.bottomAnchor="100.0"
+                                               AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0"
+                                               AnchorPane.topAnchor="100.0"/>
+                                    </children>
+                                </AnchorPane>
+                                <HBox alignment="BOTTOM_CENTER" layoutX="25.0" layoutY="313.0" prefHeight="51.0"
+                                      prefWidth="301.0" spacing="3.0" AnchorPane.bottomAnchor="20.0">
+                                    <children>
+                                        <TextArea fx:id="txtComentario" focusTraversable="false" prefHeight="51.0"
+                                                  prefWidth="242.0" promptText="Escribe un comentario"
+                                                  styleClass="area-texto"
+                                                  stylesheets="@../../../../resources/style_sheet.css" wrapText="true"/>
+                                        <Button mnemonicParsing="false" onAction="#agregarComentario" prefHeight="44.0"
+                                                prefWidth="49.0" styleClass="boton-sendComment"
+                                                stylesheets="@../../../../resources/style_sheet.css">
+                                            <graphic>
+                                                <ImageView fitHeight="41.0" fitWidth="54.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../../../images/um_send-comment.png"/>
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                    <top>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="28.0" prefWidth="352.0" styleClass="panel-bar"
+                                    stylesheets="@../../../../resources/style_sheet.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane styleClass="panel-bar" stylesheets="@../../../../resources/style_sheet.css"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <effect>
+                                        <Lighting diffuseConstant="1.58" specularConstant="0.14"
+                                                  specularExponent="27.44" surfaceScale="1.27">
+                                            <bumpInput>
+                                                <Shadow/>
+                                            </bumpInput>
+                                            <light>
+                                                <Light.Distant/>
+                                            </light>
+                                        </Lighting>
+                                    </effect>
+                                </AnchorPane>
+                                <AnchorPane styleClass="background-transparent"
+                                            stylesheets="@../../../../resources/style_sheet.css"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0"
+                                            AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="CENTER" spacing="5.0" styleClass="background-transparent"
+                                              AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Separator maxHeight="-Infinity" maxWidth="-Infinity"
+                                                           minHeight="-Infinity" minWidth="-Infinity"
+                                                           orientation="VERTICAL" prefHeight="60.0" prefWidth="2.0"
+                                                           visible="false"/>
+                                                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" onAction="#salir"
+                                                        prefHeight="25.0" prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../../images/b_close.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.77" specularConstant="0.46"
+                                                                          specularExponent="17.67" surfaceScale="1.27">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button disable="true" layoutX="12.0" layoutY="10.0"
+                                                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0"
+                                                        prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../../images/b_minimize.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.77" specularConstant="0.46"
+                                                                          specularExponent="17.67" surfaceScale="1.27">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button disable="true" layoutX="12.0" layoutY="10.0"
+                                                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" onAction="#salir"
+                                                        prefHeight="25.0" prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../../images/b_expand.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.77" specularConstant="0.46"
+                                                                          specularExponent="17.67" surfaceScale="1.27">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

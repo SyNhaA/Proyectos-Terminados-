@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="300.0" styleClass="background-clare"
+            stylesheets="@../../../../resources/style_sheet.css" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.redSocial.views.user.MessagePaneController">
+    <children>
+        <ImageView fitHeight="48.0" fitWidth="43.0" layoutX="233.0" layoutY="33.0" pickOnBounds="true"
+                   preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="2.0">
+            <image>
+                <Image url="@../../../../images/user-comment.png"/>
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="67.0" layoutY="10.0" prefHeight="51.0" prefWidth="185.0"
+                    style="-fx-background-color: #B3EAEB; -fx-background-radius: 0 20 20 20; -fx-border-color: #68D8D6; -fx-border-radius: 0 20 20 20;"
+                    AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="67.0"
+                    AnchorPane.topAnchor="15.0">
+            <children>
+                <Text fx:id="lblMensaje" layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Mensaje" wrappingWidth="151.13671875" AnchorPane.bottomAnchor="8.0"
+                      AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="9.0">
+                    <font>
+                        <Font name="Calibri" size="16.0"/>
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0"
+      prefWidth="680.0" styleClass="background-transparent" stylesheets="@../../../../resources/style_sheet.css"
+      xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.redSocial.views.user.NotificationsViewController">
+    <children>
+        <HBox alignment="CENTER" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="61.0" prefWidth="680.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="61.0" prefWidth="290.0" styleClass="texto-title"
+                       text="NOTIFICACIONES">
+                    <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="48.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <AnchorPane layoutX="46.0" layoutY="138.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="230.0" prefWidth="280.0"
+                    style="-fx-border-color: #C7C7C7; -fx-border-radius: 0 0 5 5;">
+            <children>
+                <ScrollPane layoutX="6.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="300.0"
+                            AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0"
+                            AnchorPane.topAnchor="2.0">
+                    <content>
+                        <GridPane fx:id="gridPaneMeGustas" alignment="TOP_CENTER" prefWidth="262.0">
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+                <Label fx:id="lblMensajeL" alignment="CENTER" layoutX="73.0" layoutY="58.0" prefHeight="58.0"
+                       prefWidth="414.0" styleClass="texto-italicMini" text="No hay me gustas todavía"
+                       AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0"
+                       AnchorPane.topAnchor="80.0"/>
+            </children>
+        </AnchorPane>
+        <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="96.0" prefHeight="36.0" prefWidth="180.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="35.0" prefWidth="110.0" styleClass="texto-subtitle"
+                       text="Me gustas">
+                    <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="30.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/p_heartred.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="360.0" layoutY="96.0" prefHeight="36.0" prefWidth="180.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="35.0" prefWidth="132.0" styleClass="texto-subtitle"
+                       text="Comentarios">
+                    <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="30.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/un_comment.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <AnchorPane layoutX="81.0" layoutY="436.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="172.0" prefWidth="525.0"
+                    style="-fx-border-color: #C7C7C7; -fx-border-radius: 0 0 5 5;">
+            <children>
+                <ScrollPane layoutX="6.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="300.0"
+                            AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0"
+                            AnchorPane.topAnchor="2.0">
+                    <content>
+                        <GridPane fx:id="gridPaneMensajes" alignment="TOP_CENTER" prefWidth="508.0">
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+                <Label fx:id="lblMensajeM" alignment="CENTER" layoutX="73.0" layoutY="58.0" prefHeight="58.0"
+                       prefWidth="414.0" styleClass="texto-italicMini" text="No hay mensajes todavía"
+                       AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="72.0"
+                       AnchorPane.topAnchor="50.0"/>
+            </children>
+        </AnchorPane>
+        <HBox alignment="CENTER_LEFT" layoutX="46.0" layoutY="394.0" prefHeight="36.0" prefWidth="180.0" spacing="10.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="35.0" prefWidth="102.0" styleClass="texto-subtitle"
+                       text="Mensajes">
+                    <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="30.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="33.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/un_message-chat.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <AnchorPane layoutX="360.0" layoutY="138.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="230.0" prefWidth="280.0"
+                    style="-fx-border-color: #C7C7C7; -fx-border-radius: 0 0 5 5;">
+            <children>
+                <ScrollPane layoutX="6.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="300.0"
+                            AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0"
+                            AnchorPane.topAnchor="2.0">
+                    <content>
+                        <GridPane fx:id="gridPaneComentarios" alignment="TOP_CENTER" prefWidth="262.0">
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+                <Label fx:id="lblMensajeC" alignment="CENTER" layoutX="61.0" layoutY="53.0" prefHeight="126.0"
+                       prefWidth="163.0" styleClass="texto-italicMini" text="No hay comentarios todavía"
+                       AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0"
+                       AnchorPane.topAnchor="80.0"/>
+            </children>
+        </AnchorPane>
+    </children>
+</Pane>

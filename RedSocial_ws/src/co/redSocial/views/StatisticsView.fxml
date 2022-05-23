@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="main" styleClass="raiz" stylesheets="@../../../resources/style_sheet.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.redSocial.views.StatisticsViewController">
+    <children>
+        <AnchorPane styleClass="raiz" stylesheets="@../../../resources/style_sheet.css" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane layoutX="13.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="902.0"
+                            style="-fx-border-color: #EDEDED; -fx-border-radius: 15 15 15 15;"
+                            AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0"
+                            AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="32.0" prefWidth="900.0" styleClass="panel-bar"
+                                    stylesheets="@../../../resources/style_sheet.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="32.0" prefWidth="900.0" styleClass="panel-bar"
+                                            stylesheets="@../../../resources/style_sheet.css"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <effect>
+                                        <Lighting diffuseConstant="1.58" specularConstant="0.14"
+                                                  specularExponent="27.44" surfaceScale="1.27">
+                                            <bumpInput>
+                                                <Shadow/>
+                                            </bumpInput>
+                                            <light>
+                                                <Light.Distant/>
+                                            </light>
+                                        </Lighting>
+                                    </effect>
+                                    <children>
+                                        <Label alignment="CENTER" layoutX="384.0" layoutY="6.0"
+                                               text="https://market-system/network/statistics.com" textFill="#00000073"
+                                               AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="320.0"
+                                               AnchorPane.topAnchor="8.0">
+                                            <font>
+                                                <Font name="Segoe UI Symbol" size="12.5"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="32.0" prefWidth="112.0" styleClass="background-transparent"
+                                            stylesheets="@../../../resources/style_sheet.css"
+                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0"
+                                            AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="96.0" spacing="5.0"
+                                              AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Separator maxHeight="-Infinity" maxWidth="-Infinity"
+                                                           minHeight="-Infinity" minWidth="-Infinity"
+                                                           orientation="VERTICAL" prefHeight="60.0" prefWidth="2.0"
+                                                           visible="false"/>
+                                                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" onAction="#salir"
+                                                        prefHeight="25.0" prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../images/b_close.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.77" specularConstant="0.46"
+                                                                          specularExponent="17.67" surfaceScale="1.27">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button layoutX="12.0" layoutY="10.0" maxHeight="-Infinity"
+                                                        maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                                        mnemonicParsing="false" onAction="#minimizar" prefHeight="25.0"
+                                                        prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../images/b_minimize.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.77" specularConstant="0.46"
+                                                                          specularExponent="17.67" surfaceScale="1.27">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                                <Button disable="true" layoutX="12.0" layoutY="10.0"
+                                                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                        minWidth="-Infinity" mnemonicParsing="false" onAction="#salir"
+                                                        prefHeight="25.0" prefWidth="25.0" styleClass="boton-close"
+                                                        stylesheets="@../../../resources/style_sheet.css">
+                                                    <graphic>
+                                                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../../images/b_expand.png"/>
+                                                            </image>
+                                                            <effect>
+                                                                <Lighting diffuseConstant="1.77" specularConstant="0.46"
+                                                                          specularExponent="17.67" surfaceScale="1.27">
+                                                                    <bumpInput>
+                                                                        <Shadow/>
+                                                                    </bumpInput>
+                                                                    <light>
+                                                                        <Light.Distant/>
+                                                                    </light>
+                                                                </Lighting>
+                                                            </effect>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <padding>
+                                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                                    </padding>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <center>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="650.0" prefWidth="902.0"
+                                    style="-fx-background-radius: 0 0 15 15;" styleClass="background-gradient"
+                                    stylesheets="@../../../resources/style_sheet.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="28.0" layoutY="299.0" prefHeight="300.0" prefWidth="501.0"
+                                            styleClass="container-trasparent"
+                                            stylesheets="@../../../resources/style_sheet.css">
+                                    <children>
+                                        <JFXDatePicker fx:id="dtPckrFecha" editable="false" layoutX="375.0"
+                                                       layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0"
+                                                       prefWidth="108.0"
+                                                       style="-fx-cursor: hand; -fx-background-color: rgba(250, 250, 250, 0.7); -fx-background-radius: 5;"
+                                                       visible="false" AnchorPane.topAnchor="215.0">
+                                            <defaultColor>
+                                                <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0"
+                                                                startX="0.7380952380952381" startY="0.5238095238095238">
+                                                    <stops>
+                                                        <Stop color="#8be3f7"/>
+                                                        <Stop color="#eab0f2" offset="1.0"/>
+                                                    </stops>
+                                                </LinearGradient>
+                                            </defaultColor>
+                                        </JFXDatePicker>
+                                        <Label layoutX="27.0" layoutY="3.0" styleClass="sombra"
+                                               stylesheets="@../../../resources/style_sheet.css"
+                                               text="Publicaciones de los usuarios" textFill="WHITE"
+                                               AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                            <font>
+                                                <Font name="Tw Cen MT Condensed" size="30.0"/>
+                                            </font>
+                                        </Label>
+                                        <BarChart fx:id="graficaDeBarras" barGap="3.0" categoryGap="3.0" layoutX="6.0"
+                                                  layoutY="54.0" legendVisible="false" prefHeight="260.0"
+                                                  prefWidth="495.0" AnchorPane.bottomAnchor="-15.0"
+                                                  AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="-8.0"
+                                                  AnchorPane.topAnchor="40.0">
+                                            <xAxis>
+                                                <CategoryAxis endMargin="2.0" label="Usuarios" side="BOTTOM"
+                                                              startMargin="2.0" tickLabelGap="0.0" fx:id="xAxis"/>
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis fx:id="yAxis" autoRanging="false" label="Publicaciones"
+                                                            minorTickVisible="false" side="LEFT" tickLabelGap="0.0"
+                                                            tickUnit="2.0" upperBound="20.0"/>
+                                            </yAxis>
+                                        </BarChart>
+                                    </children>
+                                </AnchorPane>
+                                <VBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="6.0" prefHeight="69.0"
+                                      prefWidth="248.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="640.0"
+                                      AnchorPane.topAnchor="6.0">
+                                    <children>
+                                        <Label styleClass="sombra" stylesheets="@../../../resources/style_sheet.css"
+                                               text="ESTADÍSTICAS" textFill="WHITE">
+                                            <font>
+                                                <Font name="Tw Cen MT Condensed Bold" size="38.0"/>
+                                            </font>
+                                        </Label>
+                                        <Text fill="#00000073" strokeType="OUTSIDE" strokeWidth="0.0"
+                                              styleClass="shadow" text="Market System Network" textAlignment="CENTER"
+                                              wrappingWidth="240.265625">
+                                            <font>
+                                                <Font name="Tw Cen MT Condensed Bold" size="28.0"/>
+                                            </font>
+                                            <effect>
+                                                <Blend mode="DARKEN"/>
+                                            </effect>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="13.0" layoutY="99.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="194.0" prefWidth="850.0"
+                                      spacing="10.0" styleClass="container-trasparent"
+                                      stylesheets="@../../../resources/style_sheet.css" AnchorPane.leftAnchor="26.0"
+                                      AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="80.0">
+                                    <children>
+                                        <Label prefHeight="29.0" prefWidth="192.0" styleClass="sombra"
+                                               text="Números generales" textFill="WHITE">
+                                            <font>
+                                                <Font name="Tw Cen MT Condensed" size="30.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="10.0" top="5.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                                              minHeight="-Infinity" minWidth="-Infinity" prefHeight="131.0"
+                                              prefWidth="850.0">
+                                            <children>
+                                                <VBox alignment="CENTER" layoutX="20.0" layoutY="10.0"
+                                                      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                      minWidth="-Infinity" prefHeight="130.0" prefWidth="170.0">
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true"
+                                                                   preserveRatio="true" styleClass="sombra">
+                                                            <image>
+                                                                <Image url="@../../../images/s_registerusers-img.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblUsuarios" alignment="TOP_CENTER"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="32.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="10" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed Extra Bold"
+                                                                      size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="107.0"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="36.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="Usuarios" textFill="#e5fdff">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed" size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                      minWidth="-Infinity" prefHeight="100.0" prefWidth="1.0"
+                                                      style="-fx-background-color: white;"/>
+                                                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0"
+                                                      prefWidth="170.0">
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true"
+                                                                   preserveRatio="true" styleClass="sombra">
+                                                            <image>
+                                                                <Image url="@../../../images/s_publications-img.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblPublicaciones" alignment="TOP_CENTER"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="32.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="30" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed Extra Bold"
+                                                                      size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="107.0"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="36.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="Publicaciones" textFill="#e5fdff">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed" size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <HBox.margin>
+                                                        <Insets/>
+                                                    </HBox.margin>
+                                                </VBox>
+                                                <Pane layoutX="318.0" layoutY="33.0" maxHeight="-Infinity"
+                                                      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                                      prefHeight="100.0" prefWidth="1.0"
+                                                      style="-fx-background-color: white;"/>
+                                                <VBox alignment="CENTER" layoutX="424.0" layoutY="8.0"
+                                                      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                      minWidth="-Infinity" prefHeight="130.0" prefWidth="170.0">
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true"
+                                                                   preserveRatio="true" styleClass="sombra">
+                                                            <image>
+                                                                <Image url="@../../../images/s_messages-img.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblMensajes" alignment="TOP_CENTER"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="32.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="40" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed Extra Bold"
+                                                                      size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="107.0"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="36.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="Mensajes" textFill="#e5fdff">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed" size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                                <Pane layoutX="423.0" layoutY="33.0" maxHeight="-Infinity"
+                                                      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                                      prefHeight="100.0" prefWidth="1.0"
+                                                      style="-fx-background-color: white;"/>
+                                                <VBox alignment="CENTER" layoutX="529.0" layoutY="8.0"
+                                                      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                      minWidth="-Infinity" prefHeight="130.0" prefWidth="170.0">
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true"
+                                                                   preserveRatio="true" styleClass="sombra">
+                                                            <image>
+                                                                <Image url="@../../../images/s_comments-img.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblComentarios" alignment="TOP_CENTER"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="32.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="15" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed Extra Bold"
+                                                                      size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="107.0"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="36.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="Comentarios" textFill="#e5fdff">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed" size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                      minWidth="-Infinity" prefHeight="100.0" prefWidth="1.0"
+                                                      style="-fx-background-color: white;"/>
+                                                <VBox alignment="CENTER" layoutX="605.0" layoutY="8.0"
+                                                      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                      minWidth="-Infinity" prefHeight="130.0" prefWidth="170.0">
+                                                    <children>
+                                                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true"
+                                                                   preserveRatio="true" styleClass="sombra">
+                                                            <image>
+                                                                <Image url="@../../../images/s_likes-img.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label fx:id="lblMegustas" alignment="TOP_CENTER"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="32.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="50" textFill="WHITE">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed Extra Bold"
+                                                                      size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="107.0"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="36.0" prefWidth="160.0" styleClass="sombra"
+                                                               text="Me gustas" textFill="#e5fdff">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed" size="33.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="5.0"/>
+                                            </VBox.margin>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <AnchorPane layoutX="546.0" layoutY="299.0" prefHeight="300.0" prefWidth="330.0"
+                                            styleClass="container-trasparent">
+                                    <children>
+                                        <GridPane layoutX="70.0" layoutY="43.0" maxHeight="-Infinity"
+                                                  maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                                  prefHeight="250.0" prefWidth="231.0" AnchorPane.leftAnchor="70.0"
+                                                  AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="40.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0"
+                                                                   prefWidth="55.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0"
+                                                                   minWidth="-Infinity" prefWidth="142.0"/>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0"
+                                                                   prefWidth="50.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0"
+                                                                vgrow="SOMETIMES"/>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0"
+                                                                vgrow="SOMETIMES"/>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0"
+                                                                vgrow="SOMETIMES"/>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0"
+                                                                vgrow="SOMETIMES"/>
+                                                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0"
+                                                                vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <Label alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0"
+                                                       prefWidth="50.0" styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="1."
+                                                       textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed Extra Bold" size="50.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0"
+                                                       maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                       minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="2."
+                                                       textFill="WHITE" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed Extra Bold" size="50.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="60.0"
+                                                       maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                       minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="3."
+                                                       textFill="WHITE" GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed Extra Bold" size="50.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                       minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0"
+                                                       prefWidth="50.0" styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="5."
+                                                       textFill="WHITE" GridPane.rowIndex="4">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed Extra Bold" size="50.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0"
+                                                       maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                       minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="4."
+                                                       textFill="WHITE" GridPane.rowIndex="3">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed Extra Bold" size="50.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblPublicacion1" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css"
+                                                       text="Nombre producto" textFill="WHITE" GridPane.columnIndex="1">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                    <GridPane.margin>
+                                                        <Insets left="8.0"/>
+                                                    </GridPane.margin>
+                                                </Label>
+                                                <Label fx:id="lblPublicacion2" layoutX="65.0" layoutY="20.0"
+                                                       prefHeight="30.0" prefWidth="223.0" styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css"
+                                                       text="Nombre producto" textFill="WHITE" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                    <padding>
+                                                        <Insets left="8.0"/>
+                                                    </padding>
+                                                </Label>
+                                                <Label fx:id="lblPublicacion5" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css"
+                                                       text="Nombre producto" textFill="WHITE" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="4">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                    <padding>
+                                                        <Insets left="8.0"/>
+                                                    </padding>
+                                                </Label>
+                                                <Label fx:id="lblPublicacion4" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css"
+                                                       text="Nombre producto" textFill="WHITE" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="3">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                    <padding>
+                                                        <Insets left="8.0"/>
+                                                    </padding>
+                                                </Label>
+                                                <Label fx:id="lblPublicacion3" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css"
+                                                       text="Nombre producto" textFill="WHITE" GridPane.columnIndex="1"
+                                                       GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                    <padding>
+                                                        <Insets left="8.0"/>
+                                                    </padding>
+                                                </Label>
+                                                <Label fx:id="lblMGPublicacion1" alignment="CENTER" layoutX="65.0"
+                                                       layoutY="20.0" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="19"
+                                                       textFill="WHITE" GridPane.columnIndex="2">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblMGPublicacion5" alignment="CENTER" layoutX="199.0"
+                                                       layoutY="20.0" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="8"
+                                                       textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblMGPublicacion4" alignment="CENTER" layoutX="10.0"
+                                                       layoutY="20.0" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="11"
+                                                       textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblMGPublicacion3" alignment="CENTER" layoutX="10.0"
+                                                       layoutY="20.0" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="14"
+                                                       textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblMGPublicacion2" alignment="CENTER" layoutX="10.0"
+                                                       layoutY="20.0" prefHeight="30.0" prefWidth="223.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="15"
+                                                       textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </GridPane>
+                                        <HBox alignment="BOTTOM_CENTER" layoutX="-115.0" layoutY="123.0"
+                                              maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                              minWidth="-Infinity" prefHeight="55.0" prefWidth="300.0" rotate="270.0"
+                                              spacing="10.0">
+                                            <children>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                       minWidth="-Infinity" prefHeight="48.0" prefWidth="87.0"
+                                                       styleClass="sombra"
+                                                       stylesheets="@../../../resources/style_sheet.css" text="Top 5"
+                                                       textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Tw Cen MT Condensed" size="50.0"/>
+                                                    </font>
+                                                </Label>
+                                                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+                                                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0"
+                                                            prefWidth="173.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" graphicTextGap="0.0"
+                                                               maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="30.0" prefWidth="155.0" styleClass="sombra"
+                                                               stylesheets="@../../../resources/style_sheet.css"
+                                                               text="Publicaciones con " textFill="WHITE"
+                                                               wrapText="true" AnchorPane.leftAnchor="0.0"
+                                                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed" size="30.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="CENTER" graphicTextGap="0.0" layoutX="1.0"
+                                                               layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                               minHeight="-Infinity" minWidth="-Infinity"
+                                                               prefHeight="30.0" prefWidth="154.0" styleClass="sombra"
+                                                               stylesheets="@../../../resources/style_sheet.css"
+                                                               text="más me gusta" textFill="WHITE" wrapText="true"
+                                                               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                               AnchorPane.rightAnchor="0.0">
+                                                            <font>
+                                                                <Font name="Tw Cen MT Condensed" size="30.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </HBox>
+                                        <Label alignment="TOP_CENTER" layoutX="243.0" layoutY="14.0"
+                                               maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                               minWidth="-Infinity" prefHeight="29.0" prefWidth="79.0"
+                                               styleClass="sombra" text="Me gustas" textFill="WHITE"
+                                               AnchorPane.topAnchor="8.0">
+                                            <font>
+                                                <Font name="Tw Cen MT Condensed" size="24.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <Button layoutX="132.0" layoutY="600.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                        minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                        onAction="#volver" prefHeight="35.0" prefWidth="35.0" styleClass="boton-back"
+                                        stylesheets="@../../../resources/style_sheet.css" AnchorPane.bottomAnchor="8.0"
+                                        AnchorPane.leftAnchor="8.0">
+                                    <graphic>
+                                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true"
+                                                   preserveRatio="true" styleClass="boton-close">
+                                            <image>
+                                                <Image url="@../../../images/b_back.png"/>
+                                            </image>
+                                            <effect>
+                                                <Lighting diffuseConstant="1.42" specularConstant="0.6">
+                                                    <bumpInput>
+                                                        <Shadow/>
+                                                    </bumpInput>
+                                                    <light>
+                                                        <Light.Distant/>
+                                                    </light>
+                                                </Lighting>
+                                            </effect>
+                                        </ImageView>
+                                    </graphic>
+                                    <padding>
+                                        <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0"/>
+                                    </padding>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane minWidth="-Infinity" prefWidth="500.0" styleClass="background-clare"
+            stylesheets="@../../../../resources/style_sheet.css" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.redSocial.views.user.NotificationPaneController">
+    <children>
+        <Label fx:id="lblFecha" alignment="CENTER_RIGHT" styleClass="texto-italicMini"
+               text="25 de mayo 2021 a las 12:45 pm" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="65.0"
+               AnchorPane.topAnchor="1.0"/>
+        <AnchorPane layoutX="57.0" layoutY="14.0" styleClass="panel-contenedorNormal" AnchorPane.bottomAnchor="8.0"
+                    AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="17.0">
+            <children>
+                <TextFlow layoutX="10.0" layoutY="11.0" prefWidth="414.0" AnchorPane.bottomAnchor="10.0"
+                          AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <Text fx:id="lblNombre" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Michelle Alejandra" wrappingWidth="193.13671875">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0"/>
+                            </font>
+                        </Text>
+                        <Text fx:id="lblContector1" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text=" te ha escrito un mensaje: " wrappingWidth="193.13671875">
+                            <font>
+                                <Font name="Calibri" size="14.0"/>
+                            </font>
+                        </Text>
+                        <Text fx:id="lblContenido" fill="#000000c1" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE"
+                              strokeWidth="0.0" text="hol" wrappingWidth="193.13671875">
+                            <font>
+                                <Font name="Calibri Italic" size="14.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </TextFlow>
+            </children>
+        </AnchorPane>
+        <Button contentDisplay="GRAPHIC_ONLY" layoutX="451.0" layoutY="23.0" mnemonicParsing="false"
+                onAction="#verMensaje" prefHeight="33.0" prefWidth="33.0" styleClass="boton-sendComment" text="Button"
+                AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="15.0">
+            <graphic>
+                <ImageView fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/un_response.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>

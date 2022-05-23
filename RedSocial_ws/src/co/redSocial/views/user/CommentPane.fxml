@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="280.0"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.redSocial.views.user.CommentPaneController">
+    <children>
+        <StackPane>
+            <children>
+                <AnchorPane fx:id="paneComentario" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="84.0"
+                            prefWidth="280.0">
+                    <children>
+                        <ImageView fitHeight="51.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../images/user-comment.png"/>
+                            </image>
+                        </ImageView>
+                        <AnchorPane prefHeight="68.0" prefWidth="209.0" styleClass="panel-contenedorNormal"
+                                    stylesheets="@../../../../resources/style_sheet.css" AnchorPane.bottomAnchor="8.0"
+                                    AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                            <children>
+                                <Text fx:id="lblComentario" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentario"
+                                      wrappingWidth="193.13671875" AnchorPane.bottomAnchor="8.0"
+                                      AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0"
+                                      AnchorPane.topAnchor="25.0">
+                                    <font>
+                                        <Font name="Calibri" size="16.0"/>
+                                    </font>
+                                </Text>
+                                <Label fx:id="lblNombre" text="Nombre vendedor" AnchorPane.leftAnchor="9.0"
+                                       AnchorPane.topAnchor="6.0">
+                                    <font>
+                                        <Font name="Calibri Bold" size="16.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="paneDeshabilitado" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="84.0"
+                            prefWidth="280.0" styleClass="background-transparent"
+                            stylesheets="@../../../../resources/style_sheet.css" visible="false">
+                    <children>
+                        <Label alignment="CENTER" style="-fx-background-color: rgba(250, 250, 250, 0.6);"
+                               text="Comentario no disponible" AnchorPane.bottomAnchor="30.0"
+                               AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0">
+                            <font>
+                                <Font name="Calibri Bold" size="16.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
